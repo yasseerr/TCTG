@@ -57,7 +57,7 @@ Window {
                 Layout.fillWidth: true
                 flat: false
                 onClicked: {
-                    results.result = "it should be added "
+                    //results.result = "it should be added "
                     results.result =  manager1.render(templateEditor.currentText,valuesEditor.currentText)
                 }
             }
@@ -86,6 +86,8 @@ Window {
     }
     TCTG_Manager{
         id: manager1
+        onYamlError: console.log("the yaml is not properly formated")
+        onTemplateError : console.log("the template is not well formated")
     }
 
 }

@@ -18,7 +18,7 @@ Item {
         anchors.fill: parent
         placeholderText: "Results"
         text: result
-        readOnly: true
+        //readOnly: true
     }
     //onResultChanged: resultTextArea.text = result
 
