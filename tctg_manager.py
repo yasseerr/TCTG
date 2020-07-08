@@ -20,7 +20,7 @@ class TCTG_Manager(QObject):
     def render(self, template_str,values):
         valuesDict = dict()
         try:
-            valuesDict = yaml.safe_load(values)
+            valuesDict = yaml.load(values)
             print(valuesDict)
         except YAMLError as e :
             self.yamlError.emit()

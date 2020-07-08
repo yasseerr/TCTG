@@ -4,7 +4,7 @@ import QtQuick.Controls 2.12
 Item {
     property string result :  ""
     visible: true
-
+    clip: true
     Rectangle{
         anchors.fill: parent
         color: "lightGray"
@@ -13,13 +13,27 @@ Item {
 
     }
 
-    TextArea{
-        id:resultTextArea
+    Flickable {
+        id: scrollView
+        flickableDirection: Flickable.VerticalFlick
         anchors.fill: parent
-        placeholderText: "Results"
-        text: result
-        //readOnly: true
+        TextArea.flickable: TextArea{
+            id:resultTextArea
+            anchors.fill: parent
+            placeholderText: "Results"
+            text: result
+            clip: false
+            //readOnly: true
+
+        }
+        ScrollBar.vertical: ScrollBar{}
     }
     //onResultChanged: resultTextArea.text = result
 
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/

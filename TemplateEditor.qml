@@ -4,17 +4,26 @@ import QtQuick.Controls 2.12
 Item {
     property alias currentText: textArea.text
     visible: true
+    clip: true
     Rectangle{
         anchors.fill: parent
         //color: Qt.lightGray
         border.color: "black"
         border.width: 1
     }
-    TextArea {
-        id: textArea
+
+    Flickable {
+        id: scrollView
+        flickableDirection: Flickable.VerticalFlick
         anchors.fill: parent
-        placeholderText: qsTr("Text Area")
+        TextArea.flickable: TextArea {
+            id: textArea
+            anchors.fill: parent
+            text: "the name is : {{name}} \n the children are : \n{%for child in childes%}\n another one : {{child}} {%endfor%}"
+        }
+        ScrollBar.vertical: ScrollBar{}
     }
+
 
 }
 
