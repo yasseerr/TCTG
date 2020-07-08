@@ -22,19 +22,17 @@ Window {
             Layout.preferredWidth: 100;
         }
 
-        TextArea {
+        ValuesEditor {
             id: valuesEditor
-            placeholderText: "#yaml text"
+            //placeholderText: "#yaml text"
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.preferredHeight: 100;
             Layout.preferredWidth: 100;
         }
 
-        TextArea {
+        ResultsView {
             id: results
-            enabled: false
-            placeholderText: "Results"
             Layout.preferredHeight: 100
             Layout.preferredWidth: 100
             Layout.fillHeight: true
@@ -45,10 +43,35 @@ Window {
 
         GridLayout {
             id: gridLayout1
+            columns: 2
+            Layout.alignment: Qt.AlignLeft | Qt.AlignTop
             Layout.preferredHeight: 100
             Layout.preferredWidth: 100
             Layout.fillHeight: true
             Layout.fillWidth: true
+
+            Button {
+                id: renderButton
+                text: qsTr("Render")
+                Layout.fillWidth: true
+                flat: false
+            }
+
+            Button {
+                id: clearButton
+                text: qsTr("Clear")
+                Layout.fillWidth: true
+                Layout.column: 0
+                Layout.row: 1
+            }
+            Item {
+                id: spacer1
+                Layout.preferredWidth: 300
+                Layout.fillWidth: true
+                Layout.column: 1
+                Layout.row: 0
+                Layout.rowSpan: 2
+            }
         }
 
     }
