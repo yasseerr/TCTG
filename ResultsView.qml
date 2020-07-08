@@ -22,6 +22,8 @@ Item {
             anchors.fill: parent
             placeholderText: "Results"
             text: result
+            selectByMouse: true
+            selectByKeyboard: true
             clip: false
             //readOnly: true
 

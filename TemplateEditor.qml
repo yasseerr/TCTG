@@ -19,6 +19,8 @@ Item {
         TextArea.flickable: TextArea {
             id: textArea
             anchors.fill: parent
+            selectByMouse: true
+            selectByKeyboard: true
             text: "the name is : {{name}} \n the children are : \n{%for child in childes%}\n another one : {{child}} {%endfor%}"
         }
         ScrollBar.vertical: ScrollBar{}

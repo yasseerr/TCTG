@@ -2,14 +2,46 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.12
-import TCTG 1.0
+//import TCTG 1.0
 
-Window {
+ApplicationWindow {
     id: mainWindow
     title: qsTr("Hello World")
     width: 1280
     height: 960
     visible: true
+    menuBar: MenuBar{
+
+        Menu {
+            title: qsTr("&File")
+            Action { text: qsTr("&New...") }
+            Action { text: qsTr("&Open...") }
+            Action { text: qsTr("&Save State") }
+            Action { text: qsTr("&Save Template") }
+            Action { text: qsTr("&Save Values") }
+            Action { text: qsTr("Save &As...") }
+            MenuSeparator { }
+            Action { text: qsTr("&Quit") }
+        }
+        Menu {
+            title: qsTr("&Edit")
+            Action { text: qsTr("Cu&t") }
+            Action { text: qsTr("&Copy") }
+            Action { text: qsTr("&Paste") }
+            Action { text: qsTr("&Copy Results") }
+        }
+        Menu {
+            title: qsTr("&Tools")
+            Action { text: qsTr("&Render") }
+            Action { text: qsTr("&Clear") }
+            //Action { text: qsTr("&Paste") }
+            //Action { text: qsTr("&Copy Results") }
+        }
+        Menu {
+            title: qsTr("&Help")
+            Action { text: qsTr("&About") }
+        }
+    }
 
     GridLayout {
         id: gridLayout
@@ -44,6 +76,8 @@ Window {
 
         GridLayout {
             id: gridLayout1
+            Layout.topMargin: 0
+            Layout.leftMargin: 0
             columns: 2
             Layout.alignment: Qt.AlignLeft | Qt.AlignTop
             Layout.preferredHeight: 100
@@ -69,6 +103,40 @@ Window {
                 Layout.column: 0
                 Layout.row: 1
             }
+            Button {
+                id: saveTemplateButton
+                text: qsTr("Save Template")
+                Layout.fillWidth: true
+                Layout.column: 0
+                Layout.row: 2
+            }
+
+            Button {
+                id: saveValuesButton
+                text: qsTr("Save Values")
+                Layout.fillWidth: true
+                Layout.column: 0
+                Layout.row: 3
+            }
+
+            Button {
+                id: copyResultsButton
+                text: qsTr("Copy Results")
+                Layout.fillWidth: true
+                Layout.column: 0
+                Layout.row: 4
+            }
+
+            RoundButton {
+                id: saveStateButton
+                text: qsTr("Save State")
+                Layout.fillWidth: true
+                Layout.column: 0
+                Layout.row: 5
+
+            }
+
+
             Item {
                 id: spacer1
                 Layout.preferredWidth: 300
@@ -77,6 +145,7 @@ Window {
                 Layout.row: 0
                 Layout.rowSpan: 2
             }
+
         }
 
     }
@@ -84,11 +153,11 @@ Window {
         mainWindow.setTitle("TCTG")
         gridLayout.anchors.margins = 10
     }
-    TCTG_Manager{
-        id: manager1
-        onYamlError: console.log("the yaml is not properly formated")
-        onTemplateError : console.log("the template is not well formated")
-    }
+//    TCTG_Manager{
+//        id: manager1
+//        onYamlError: console.log("the yaml is not properly formated")
+//        onTemplateError : console.log("the template is not well formated")
+//    }
 
 }
 

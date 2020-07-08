@@ -18,6 +18,8 @@ Item {
         TextArea.flickable: TextArea{
             id: textArea
             anchors.fill: parent
+            selectByMouse: true
+            selectByKeyboard: true
             placeholderText: "Values in YAML"
             text: "name : awesome\nchildes :\n - cool\n - smart\n - fantastic"
         }
