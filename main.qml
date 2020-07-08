@@ -7,8 +7,8 @@ import TCTG 1.0
 Window {
     id: mainWindow
     title: qsTr("Hello World")
-    width: 640
-    height: 480
+    width: 1280
+    height: 960
     visible: true
 
     GridLayout {
@@ -57,7 +57,8 @@ Window {
                 Layout.fillWidth: true
                 flat: false
                 onClicked: {
-                    manager1.render("text1","text2")
+                    results.result = "it should be added "
+                    results.result =  manager1.render(templateEditor.currentText,valuesEditor.currentText)
                 }
             }
 

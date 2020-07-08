@@ -2,11 +2,12 @@ import QtQuick 2.0
 import QtQuick.Controls 2.12
 
 Item {
+    property alias currentText: textArea.text
     visible: true
     Rectangle{
         anchors.fill: parent
-        color: Qt.lightGray
-        border.color: Qt.black
+        //color: Qt.lightGray
+        border.color: "black"
         border.width: 1
     }
     TextArea {

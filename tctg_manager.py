@@ -7,6 +7,7 @@ class TCTG_Manager(QObject):
         QObject.__init__(self)
         self.nmbr= 0
 
-    @Slot(str,str)
-    def render(self, values,template):
+    @Slot(str,str,result=str)
+    def render(self, template,values):
         print(values)
+        return "every thing is rendered dont worry"

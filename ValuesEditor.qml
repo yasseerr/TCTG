@@ -3,18 +3,18 @@ import QtQuick.Controls 2.12
 
 Item {
     visible: true
-    property string result: ""
+    property alias currentText: textArea.text
 
     Rectangle{
         anchors.fill: parent
-        color: Qt.lightGray
-        border.color: Qt.black
+        //color: Qt.lightGray
+        border.color: "black"
         border.width: 1
     }
 
     TextArea{
+        id: textArea
         anchors.fill: parent
         placeholderText: "Values in YAML"
-        text: result
     }
 }
