@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.12
+import TCTG 1.0
 
 Window {
     id: mainWindow
@@ -55,6 +56,9 @@ Window {
                 text: qsTr("Render")
                 Layout.fillWidth: true
                 flat: false
+                onClicked: {
+                    manager1.render("text1","text2")
+                }
             }
 
             Button {
@@ -78,6 +82,9 @@ Window {
     Component.onCompleted: {
         mainWindow.setTitle("TCTG")
         gridLayout.anchors.margins = 10
+    }
+    TCTG_Manager{
+        id: manager1
     }
 
 }
