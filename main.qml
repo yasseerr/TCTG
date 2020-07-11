@@ -16,7 +16,14 @@ ApplicationWindow {
         Menu {
             title: qsTr("&File")
             Action { text: qsTr("&New...") }
-            Action { text: qsTr("&Open State...") }
+            Action {
+                id: openStateAction
+                text: qsTr("&Open State...")
+                shortcut: StandardKey.Open
+                onTriggered: {
+                    openStateFileDialog.open()
+                }
+            }
             Action {
                 id: saveStateAction
                 text: qsTr("&Save State")
@@ -178,6 +185,27 @@ ApplicationWindow {
         onAccepted: {
             console.log("You chose: " + saveStateFileDialog.fileUrls)
             manager1.saveState(templateEditor.currentText,valuesEditor.currentText,fileUrl)
+            //Qt.quit()
+        }
+        onRejected: {
+            console.log("Canceled")
+            //Qt.quit()
+            exitedProperly = false
+        }
+        //Component.onCompleted: visible = true
+    }
+
+    FileDialog {
+        id: openStateFileDialog
+        title: "Please choose a file to save the state"
+        folder: shortcuts.home
+        selectExisting: true
+        modality: Qt.ApplicationModal
+        onAccepted: {
+            console.log("You chose: " + saveStateFileDialog.fileUrls)
+            var retList = manager1.openState(fileUrl)
+            templateEditor.loadText(retList[0])
+            valuesEditor.loadText(retList[1])
             //Qt.quit()
         }
         onRejected: {

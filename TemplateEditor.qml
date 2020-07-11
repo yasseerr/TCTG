@@ -27,6 +27,10 @@ Item {
         ScrollBar.vertical: ScrollBar{}
     }
 
+    function loadText(t){
+        textArea.text = t
+    }
+
 
 }
 

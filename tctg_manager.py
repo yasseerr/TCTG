@@ -69,5 +69,17 @@ class TCTG_Manager(QObject):
         stateDict = {"name":"unknown","template":templateText,"values":valuesText}
         json.dump(stateDict,f)
         f.close()
+    
+    @Slot(QUrl, result='QVariantList')
+    def openState(self, fileUrl:QUrl):
+        f = open(fileUrl.toLocalFile(), "r")
+        stateDict = json.load(f)
+        f.close()
+        retList = [None,None]
+        print(stateDict["template"])
+        print(stateDict["values"])
+        return [stateDict["template"],stateDict["values"]]
+
+        
         
 

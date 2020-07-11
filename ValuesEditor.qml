@@ -34,4 +34,7 @@ Item {
     function getPlainText(){
         return textArea.getText(0,textArea.length)
     }
+    function loadText(t){
+        textArea.text = t
+    }
 }
