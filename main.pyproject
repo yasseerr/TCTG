@@ -1,3 +1,3 @@
 {
-    "files": ["main.qml","ValuesEditor.qml","EditorManager.py","main.py","ResultsView.qml","TemplateEditor.qml","tctg_manager.py"]
+    "files": ["EditorManager.py","TemplateEditor.qml","tctg_manager.py","ResultsView.qml","main.qml","main.py","ValuesEditor.qml","resources.qrc"]
 }

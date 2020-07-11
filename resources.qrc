@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ResultsView.qml</file>
+        <file>TemplateEditor.qml</file>
+        <file>ValuesEditor.qml</file>
+    </qresource>
+</RCC>
