@@ -20,9 +20,19 @@ Item {
             anchors.fill: parent
             selectByMouse: true
             selectByKeyboard: true
-            placeholderText: "Values in YAML"
-            text: "name : awesome\nchildes :\n - cool\n - smart\n - fantastic"
+            font.pixelSize: 15
+            //placeholderText: "Values in YAML"
+            textFormat: Text.RichText
+            //preeditText: ""
+            //overwriteMode: true
+            text: "name : awesome <br/>childes :<br/> - cool<br/> - smart<br/> - fantastic"
         }
         ScrollBar.vertical: ScrollBar{}
+    }
+    function updateHighlighting(richText){
+        textArea.text = richText
+    }
+    function getPlainText(){
+        return textArea.getText(0,textArea.length)
     }
 }

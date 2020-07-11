@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.12
-//import TCTG 1.0
+import TCTG 1.0
 
 ApplicationWindow {
     id: mainWindow
@@ -15,8 +15,15 @@ ApplicationWindow {
         Menu {
             title: qsTr("&File")
             Action { text: qsTr("&New...") }
-            Action { text: qsTr("&Open...") }
-            Action { text: qsTr("&Save State") }
+            Action { text: qsTr("&Open State...") }
+            Action {
+                id: saveStateAction
+                text: qsTr("&Save State")
+                shortcut: StandardKey.Save
+                onTriggered: {
+                    results.result = "saving the state somewhere"
+                }
+            }
             Action { text: qsTr("&Save Template") }
             Action { text: qsTr("&Save Values") }
             Action { text: qsTr("Save &As...") }
@@ -102,6 +109,11 @@ ApplicationWindow {
                 Layout.fillWidth: true
                 Layout.column: 0
                 Layout.row: 1
+                onClicked: {
+                    var the_code = valuesEditor.getPlainText();
+                    console.log(the_code)
+                     valuesEditor.updateHighlighting(manager1.highlightCode(the_code,"YAML"))
+                }
             }
             Button {
                 id: saveTemplateButton
@@ -133,6 +145,7 @@ ApplicationWindow {
                 Layout.fillWidth: true
                 Layout.column: 0
                 Layout.row: 5
+                action: saveStateAction
 
             }
 
@@ -153,11 +166,11 @@ ApplicationWindow {
         mainWindow.setTitle("TCTG")
         gridLayout.anchors.margins = 10
     }
-//    TCTG_Manager{
-//        id: manager1
-//        onYamlError: console.log("the yaml is not properly formated")
-//        onTemplateError : console.log("the template is not well formated")
-//    }
+    TCTG_Manager{
+        id: manager1
+        onYamlError: console.log("the yaml is not properly formated")
+        onTemplateError : console.log("the template is not well formated")
+    }
 
 }
 

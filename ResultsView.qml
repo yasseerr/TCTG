@@ -26,6 +26,7 @@ Item {
             selectByKeyboard: true
             clip: false
             //readOnly: true
+            font.pixelSize: 17
 
         }
         ScrollBar.vertical: ScrollBar{}
