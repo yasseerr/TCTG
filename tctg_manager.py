@@ -1,6 +1,7 @@
 
-from PySide2.QtCore import QObject,Signal,Slot
+from PySide2.QtCore import QObject,Signal,Slot,QUrl
 
+import json
 import yaml
 from yaml.error import YAMLError
 from jinja2 import Environment, PackageLoader, select_autoescape,Template,TemplateError
@@ -59,5 +60,14 @@ class TCTG_Manager(QObject):
         result = highlight(code,codeLexer,formatter,f)
         print(result)
         return result
+    
+    @Slot(str,str,QUrl)
+    def saveState(self, templateText:str,valuesText:str,fileURL:QUrl):
+        #print("the save state has been called \n"+templateText+" \n"+valuesText+"\n \n "+fileURL.toString())
+        print("printing the path: " + fileURL.path())
+        f = open(fileURL.toLocalFile(),"w")
+        stateDict = {"name":"unknown","template":templateText,"values":valuesText}
+        json.dump(stateDict,f)
+        f.close()
         
 

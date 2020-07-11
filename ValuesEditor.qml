@@ -22,10 +22,9 @@ Item {
             selectByKeyboard: true
             font.pixelSize: 15
             //placeholderText: "Values in YAML"
-            textFormat: Text.RichText
             //preeditText: ""
             //overwriteMode: true
-            text: "name : awesome <br/>childes :<br/> - cool<br/> - smart<br/> - fantastic"
+            text: "name : awesome\nchildes :\n - cool\n - smart\n - fantastic"
         }
         ScrollBar.vertical: ScrollBar{}
     }

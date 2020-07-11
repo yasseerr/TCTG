@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.12
+import QtQuick.Dialogs 1.0
 import TCTG 1.0
 
 ApplicationWindow {
@@ -21,7 +22,7 @@ ApplicationWindow {
                 text: qsTr("&Save State")
                 shortcut: StandardKey.Save
                 onTriggered: {
-                    results.result = "saving the state somewhere"
+                    saveStateFileDialog.open()
                 }
             }
             Action { text: qsTr("&Save Template") }
@@ -110,6 +111,7 @@ ApplicationWindow {
                 Layout.column: 0
                 Layout.row: 1
                 onClicked: {
+                    //TODO add the support for html highlighting
                     var the_code = valuesEditor.getPlainText();
                     console.log(the_code)
                      valuesEditor.updateHighlighting(manager1.highlightCode(the_code,"YAML"))
@@ -166,11 +168,32 @@ ApplicationWindow {
         mainWindow.setTitle("TCTG")
         gridLayout.anchors.margins = 10
     }
+
+    FileDialog {
+        id: saveStateFileDialog
+        title: "Please choose a file to save the state"
+        folder: shortcuts.home
+        selectExisting: false
+        modality: Qt.ApplicationModal
+        onAccepted: {
+            console.log("You chose: " + saveStateFileDialog.fileUrls)
+            manager1.saveState(templateEditor.currentText,valuesEditor.currentText,fileUrl)
+            //Qt.quit()
+        }
+        onRejected: {
+            console.log("Canceled")
+            //Qt.quit()
+            exitedProperly = false
+        }
+        //Component.onCompleted: visible = true
+    }
+
     TCTG_Manager{
         id: manager1
         onYamlError: console.log("the yaml is not properly formated")
         onTemplateError : console.log("the template is not well formated")
     }
+
 
 }
 
