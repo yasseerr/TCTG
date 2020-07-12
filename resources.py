@@ -1,15 +1,159 @@
-# -*- coding: utf-8 -*-
-
-# Resource object code
-#
-# Created: Sat Jul 11 13:40:47 2020
-#      by: The Resource Compiler for PySide2 (Qt v5.12.1)
-#
+# Resource object code (Python 3)
+# Created by: object code
+# Created by: The Resource Compiler for Qt version 5.15.0
 # WARNING! All changes made in this file will be lost!
 
 from PySide2 import QtCore
 
 qt_resource_data = b"\
+\x00\x00\x03\x9a\
+i\
+mport QtQuick 2.\
+12\x0d\x0aimport QtQui\
+ck.Controls 2.12\
+\x0d\x0a\x0d\x0aItem {\x0d\x0a    \
+property string \
+result :  \x22\x22\x0d\x0a  \
+  visible: true\x0d\
+\x0a    clip: true\x0d\
+\x0a    Rectangle{\x0d\
+\x0a        anchors\
+.fill: parent\x0d\x0a \
+       color: \x22l\
+ightGray\x22\x0d\x0a     \
+   border.color:\
+ \x22black\x22\x0d\x0a      \
+  border.width: \
+1\x0d\x0a\x0d\x0a    }\x0d\x0a\x0d\x0a  \
+  Flickable {\x0d\x0a \
+       id: scrol\
+lView\x0d\x0a        f\
+lickableDirectio\
+n: Flickable.Ver\
+ticalFlick\x0d\x0a    \
+    anchors.fill\
+: parent\x0d\x0a      \
+  TextArea.flick\
+able: TextArea{\x0d\
+\x0a            id:\
+resultTextArea\x0d\x0a\
+            anch\
+ors.fill: parent\
+\x0d\x0a            pl\
+aceholderText: \x22\
+Results\x22\x0d\x0a      \
+      text: resu\
+lt\x0d\x0a            \
+selectByMouse: t\
+rue\x0d\x0a           \
+ selectByKeyboar\
+d: true\x0d\x0a       \
+     clip: false\
+\x0d\x0a            //\
+readOnly: true\x0d\x0a\
+            font\
+.pixelSize: 17\x0d\x0a\
+\x0d\x0a        }\x0d\x0a   \
+     ScrollBar.v\
+ertical: ScrollB\
+ar{}\x0d\x0a    }\x0d\x0a   \
+ //onResultChang\
+ed: resultTextAr\
+ea.text = result\
+\x0d\x0a\x0d\x0a}\x0d\x0a\x0d\x0a/*##^##\
+\x0d\x0aDesigner {\x0d\x0a  \
+  D{i:0;autoSize\
+:true;height:480\
+;width:640}\x0d\x0a}\x0d\x0a\
+##^##*/\x0d\x0a\
+\x00\x00\x05S\
+i\
+mport QtQuick 2.\
+12\x0d\x0aimport QtQui\
+ck.Controls 2.12\
+\x0d\x0a\x0d\x0aItem {\x0d\x0a    \
+visible: true\x0d\x0a \
+   property alia\
+s currentText: t\
+extArea.text\x0d\x0a  \
+  clip: true\x0d\x0a  \
+  Rectangle{\x0d\x0a  \
+      anchors.fi\
+ll: parent\x0d\x0a    \
+    //color: Qt.\
+lightGray\x0d\x0a     \
+   border.color:\
+ \x22black\x22\x0d\x0a      \
+  border.width: \
+1\x0d\x0a    }\x0d\x0a    Fl\
+ickable {\x0d\x0a     \
+   id: scrollVie\
+w\x0d\x0a        flick\
+ableDirection: F\
+lickable.Vertica\
+lFlick\x0d\x0a        \
+anchors.fill: pa\
+rent\x0d\x0a        Te\
+xtArea.flickable\
+: TextArea{\x0d\x0a   \
+         id: tex\
+tArea\x0d\x0a         \
+   selectByMouse\
+: true\x0d\x0a        \
+    selectByKeyb\
+oard: true\x0d\x0a    \
+        font.pix\
+elSize: 15\x0d\x0a    \
+        textForm\
+at:  Text.RichTe\
+xt\x0d\x0a            \
+//placeholderTex\
+t: \x22Values in YA\
+ML\x22\x0d\x0a           \
+ //preeditText: \
+\x22\x22\x0d\x0a            \
+//overwriteMode:\
+ true\x0d\x0a         \
+   text: \x22name :\
+ awesome<br/>chi\
+ldes :<br/> - co\
+ol<br/> - smart<\
+br/> - fantastic\
+\x22\x0d\x0a        }\x0d\x0a  \
+      ScrollBar.\
+vertical: Scroll\
+Bar{}\x0d\x0a        o\
+nWidthChanged: {\
+\x0d\x0a            te\
+xtArea.width = t\
+extArea.width>sc\
+rollView.width?t\
+extArea.width:sc\
+rollView.width\x0d\x0a\
+        }\x0d\x0a     \
+   onHeightChang\
+ed: {textArea.he\
+ight = textArea.\
+height>scrollVie\
+w.height?textAre\
+a.height:scrollV\
+iew.height}\x0d\x0a   \
+ }\x0d\x0a    function\
+ updateHighlight\
+ing(richText){\x0d\x0a\
+        textArea\
+.text = richText\
+\x0d\x0a    }\x0d\x0a    fun\
+ction getPlainTe\
+xt(){\x0d\x0a        r\
+eturn textArea.g\
+etText(0,textAre\
+a.length)\x0d\x0a    }\
+\x0d\x0a    function l\
+oadText(t){\x0d\x0a   \
+     textArea.te\
+xt = t\x0d\x0a    }\x0d\x0a}\
+\x0d\x0a\
 \x00\x00\x03\xdc\
 i\
 mport QtQuick 2.\
@@ -74,571 +218,108 @@ th:640}D{i:1}D{i\
 :3;anchors_x:73;\
 anchors_y:28}\x0d\x0a}\
 \x0d\x0a##^##*/\x0d\x0a\
-\x00\x00\x1a\xce\
-i\
-mport QtQuick 2.\
-12\x0d\x0aimport QtQui\
-ck.Window 2.12\x0d\x0a\
-import QtQuick.L\
-ayouts 1.3\x0d\x0aimpo\
-rt QtQuick.Contr\
-ols 2.12\x0d\x0aimport\
- QtQuick.Dialogs\
- 1.0\x0d\x0aimport TCT\
-G 1.0\x0d\x0a\x0d\x0aApplica\
-tionWindow {\x0d\x0a  \
-  id: mainWindow\
-\x0d\x0a    title: qsT\
-r(\x22Hello World\x22)\
-\x0d\x0a    width: 128\
-0\x0d\x0a    height: 9\
-60\x0d\x0a    visible:\
- true\x0d\x0a    menuB\
-ar: MenuBar{\x0d\x0a\x0d\x0a\
-        Menu {\x0d\x0a\
-            titl\
-e: qsTr(\x22&File\x22)\
-\x0d\x0a            Ac\
-tion { text: qsT\
-r(\x22&New...\x22) }\x0d\x0a\
-            Acti\
-on {\x0d\x0a          \
-      id: openSt\
-ateAction\x0d\x0a     \
-           text:\
- qsTr(\x22&Open Sta\
-te...\x22)\x0d\x0a       \
-         shortcu\
-t: StandardKey.O\
-pen\x0d\x0a           \
-     onTriggered\
-: {\x0d\x0a           \
-         openSta\
-teFileDialog.ope\
-n()\x0d\x0a           \
-     }\x0d\x0a        \
-    }\x0d\x0a         \
-   Action {\x0d\x0a   \
-             id:\
- saveStateAction\
-\x0d\x0a              \
-  text: qsTr(\x22&S\
-ave State\x22)\x0d\x0a   \
-             sho\
-rtcut: StandardK\
-ey.Save\x0d\x0a       \
-         onTrigg\
-ered: {\x0d\x0a       \
-             sav\
-eStateFileDialog\
-.open()\x0d\x0a       \
-         }\x0d\x0a    \
-        }\x0d\x0a     \
-       Action { \
-text: qsTr(\x22&Sav\
-e Template\x22) }\x0d\x0a\
-            Acti\
-on { text: qsTr(\
-\x22&Save Values\x22) \
-}\x0d\x0a            A\
-ction { text: qs\
-Tr(\x22Save &As...\x22\
-) }\x0d\x0a           \
- MenuSeparator {\
- }\x0d\x0a            \
-Action { text: q\
-sTr(\x22&Quit\x22) }\x0d\x0a\
-        }\x0d\x0a     \
-   Menu {\x0d\x0a     \
-       title: qs\
-Tr(\x22&Edit\x22)\x0d\x0a   \
-         Action \
-{ text: qsTr(\x22Cu\
-&t\x22) }\x0d\x0a        \
-    Action { tex\
-t: qsTr(\x22&Copy\x22)\
- }\x0d\x0a            \
-Action { text: q\
-sTr(\x22&Paste\x22) }\x0d\
-\x0a            Act\
-ion { text: qsTr\
-(\x22&Copy Results\x22\
-) }\x0d\x0a        }\x0d\x0a\
-        Menu {\x0d\x0a\
-            titl\
-e: qsTr(\x22&Tools\x22\
-)\x0d\x0a            A\
-ction { text: qs\
-Tr(\x22&Render\x22) }\x0d\
-\x0a            Act\
-ion { text: qsTr\
-(\x22&Clear\x22) }\x0d\x0a  \
-          //Acti\
-on { text: qsTr(\
-\x22&Paste\x22) }\x0d\x0a   \
-         //Actio\
-n { text: qsTr(\x22\
-&Copy Results\x22) \
-}\x0d\x0a        }\x0d\x0a  \
-      Menu {\x0d\x0a  \
-          title:\
- qsTr(\x22&Help\x22)\x0d\x0a\
-            Acti\
-on { text: qsTr(\
-\x22&About\x22) }\x0d\x0a   \
-     }\x0d\x0a    }\x0d\x0a\x0d\
-\x0a    GridLayout \
-{\x0d\x0a        id: g\
-ridLayout\x0d\x0a     \
-   anchors.fill:\
- parent\x0d\x0a\x0d\x0a     \
-   TemplateEdito\
-r {\x0d\x0a           \
- id: templateEdi\
-tor\x0d\x0a           \
- Layout.fillWidt\
-h: true\x0d\x0a       \
-     Layout.fill\
-Height: true\x0d\x0a  \
-          Layout\
-.preferredHeight\
-: 100;\x0d\x0a        \
-    Layout.prefe\
-rredWidth: 100;\x0d\
-\x0a        }\x0d\x0a\x0d\x0a  \
-      ValuesEdit\
-or {\x0d\x0a          \
-  id: valuesEdit\
-or\x0d\x0a            \
-//placeholderTex\
-t: \x22#yaml text\x22\x0d\
-\x0a            Lay\
-out.fillWidth: t\
-rue\x0d\x0a           \
- Layout.fillHeig\
-ht: true\x0d\x0a      \
-      Layout.pre\
-ferredHeight: 10\
-0;\x0d\x0a            \
-Layout.preferred\
-Width: 100;\x0d\x0a   \
-     }\x0d\x0a\x0d\x0a      \
-  ResultsView {\x0d\
-\x0a            id:\
- results\x0d\x0a      \
-      Layout.pre\
-ferredHeight: 10\
-0\x0d\x0a            L\
-ayout.preferredW\
-idth: 100\x0d\x0a     \
-       Layout.fi\
-llHeight: true\x0d\x0a\
-            Layo\
-ut.fillWidth: tr\
-ue\x0d\x0a            \
-Layout.column: 0\
-\x0d\x0a            La\
-yout.row: 1\x0d\x0a   \
-     }\x0d\x0a\x0d\x0a      \
-  GridLayout {\x0d\x0a\
-            id: \
-gridLayout1\x0d\x0a   \
-         Layout.\
-topMargin: 0\x0d\x0a  \
-          Layout\
-.leftMargin: 0\x0d\x0a\
-            colu\
-mns: 2\x0d\x0a        \
-    Layout.align\
-ment: Qt.AlignLe\
-ft | Qt.AlignTop\
-\x0d\x0a            La\
-yout.preferredHe\
-ight: 100\x0d\x0a     \
-       Layout.pr\
-eferredWidth: 10\
-0\x0d\x0a            L\
-ayout.fillHeight\
-: true\x0d\x0a        \
-    Layout.fillW\
-idth: true\x0d\x0a\x0d\x0a  \
-          Button\
- {\x0d\x0a            \
-    id: renderBu\
-tton\x0d\x0a          \
-      text: qsTr\
-(\x22Render\x22)\x0d\x0a    \
-            Layo\
-ut.fillWidth: tr\
-ue\x0d\x0a            \
-    flat: false\x0d\
-\x0a               \
- onClicked: {\x0d\x0a \
-                \
-   //results.res\
-ult = \x22it should\
- be added \x22\x0d\x0a   \
-                \
- results.result \
-=  manager1.rend\
-er(templateEdito\
-r.currentText,va\
-luesEditor.curre\
-ntText)\x0d\x0a       \
-         }\x0d\x0a    \
-        }\x0d\x0a\x0d\x0a   \
-         Button \
-{\x0d\x0a             \
-   id: clearButt\
-on\x0d\x0a            \
-    text: qsTr(\x22\
-Clear\x22)\x0d\x0a       \
-         Layout.\
-fillWidth: true\x0d\
-\x0a               \
- Layout.column: \
-0\x0d\x0a             \
-   Layout.row: 1\
-\x0d\x0a              \
-  onClicked: {\x0d\x0a\
-                \
-    //TODO add t\
-he support for h\
-tml highlighting\
-\x0d\x0a              \
-      var the_co\
-de = valuesEdito\
-r.getPlainText()\
-;\x0d\x0a             \
-       console.l\
-og(the_code)\x0d\x0a  \
-                \
-   valuesEditor.\
-updateHighlighti\
-ng(manager1.high\
-lightCode(the_co\
-de,\x22YAML\x22))\x0d\x0a   \
-             }\x0d\x0a\
-            }\x0d\x0a \
-           Butto\
-n {\x0d\x0a           \
-     id: saveTem\
-plateButton\x0d\x0a   \
-             tex\
-t: qsTr(\x22Save Te\
-mplate\x22)\x0d\x0a      \
-          Layout\
-.fillWidth: true\
-\x0d\x0a              \
-  Layout.column:\
- 0\x0d\x0a            \
-    Layout.row: \
-2\x0d\x0a            }\
-\x0d\x0a\x0d\x0a            \
-Button {\x0d\x0a      \
-          id: sa\
-veValuesButton\x0d\x0a\
-                \
-text: qsTr(\x22Save\
- Values\x22)\x0d\x0a     \
-           Layou\
-t.fillWidth: tru\
-e\x0d\x0a             \
-   Layout.column\
-: 0\x0d\x0a           \
-     Layout.row:\
- 3\x0d\x0a            \
-}\x0d\x0a\x0d\x0a           \
- Button {\x0d\x0a     \
-           id: c\
-opyResultsButton\
-\x0d\x0a              \
-  text: qsTr(\x22Co\
-py Results\x22)\x0d\x0a  \
-              La\
-yout.fillWidth: \
-true\x0d\x0a          \
-      Layout.col\
-umn: 0\x0d\x0a        \
-        Layout.r\
-ow: 4\x0d\x0a         \
-   }\x0d\x0a\x0d\x0a        \
-    RoundButton \
-{\x0d\x0a             \
-   id: saveState\
-Button\x0d\x0a        \
-        text: qs\
-Tr(\x22Save State\x22)\
-\x0d\x0a              \
-  Layout.fillWid\
-th: true\x0d\x0a      \
-          Layout\
-.column: 0\x0d\x0a    \
-            Layo\
-ut.row: 5\x0d\x0a     \
-           actio\
-n: saveStateActi\
-on\x0d\x0a\x0d\x0a          \
-  }\x0d\x0a\x0d\x0a\x0d\x0a       \
-     Item {\x0d\x0a   \
-             id:\
- spacer1\x0d\x0a      \
-          Layout\
-.preferredWidth:\
- 300\x0d\x0a          \
-      Layout.fil\
-lWidth: true\x0d\x0a  \
-              La\
-yout.column: 1\x0d\x0a\
-                \
-Layout.row: 0\x0d\x0a \
-               L\
-ayout.rowSpan: 2\
-\x0d\x0a            }\x0d\
-\x0a\x0d\x0a        }\x0d\x0a\x0d\x0a\
-    }\x0d\x0a    Compo\
-nent.onCompleted\
-: {\x0d\x0a        mai\
-nWindow.setTitle\
-(\x22TCTG\x22)\x0d\x0a      \
-  gridLayout.anc\
-hors.margins = 1\
-0\x0d\x0a    }\x0d\x0a\x0d\x0a    \
-FileDialog {\x0d\x0a  \
-      id: saveSt\
-ateFileDialog\x0d\x0a \
-       title: \x22P\
-lease choose a f\
-ile to save the \
-state\x22\x0d\x0a        \
-folder: shortcut\
-s.home\x0d\x0a        \
-selectExisting: \
-false\x0d\x0a        m\
-odality: Qt.Appl\
-icationModal\x0d\x0a  \
-      onAccepted\
-: {\x0d\x0a           \
- console.log(\x22Yo\
-u chose: \x22 + sav\
-eStateFileDialog\
-.fileUrls)\x0d\x0a    \
-        manager1\
-.saveState(templ\
-ateEditor.curren\
-tText,valuesEdit\
-or.currentText,f\
-ileUrl)\x0d\x0a       \
-     //Qt.quit()\
-\x0d\x0a        }\x0d\x0a   \
-     onRejected:\
- {\x0d\x0a            \
-console.log(\x22Can\
-celed\x22)\x0d\x0a       \
-     //Qt.quit()\
-\x0d\x0a            ex\
-itedProperly = f\
-alse\x0d\x0a        }\x0d\
-\x0a        //Compo\
-nent.onCompleted\
-: visible = true\
-\x0d\x0a    }\x0d\x0a\x0d\x0a    F\
-ileDialog {\x0d\x0a   \
-     id: openSta\
-teFileDialog\x0d\x0a  \
-      title: \x22Pl\
-ease choose a fi\
-le to save the s\
-tate\x22\x0d\x0a        f\
-older: shortcuts\
-.home\x0d\x0a        s\
-electExisting: t\
-rue\x0d\x0a        mod\
-ality: Qt.Applic\
-ationModal\x0d\x0a    \
-    onAccepted: \
-{\x0d\x0a            c\
-onsole.log(\x22You \
-chose: \x22 + saveS\
-tateFileDialog.f\
-ileUrls)\x0d\x0a      \
-      var retLis\
-t = manager1.ope\
-nState(fileUrl)\x0d\
-\x0a            tem\
-plateEditor.load\
-Text(retList[0])\
-\x0d\x0a            va\
-luesEditor.loadT\
-ext(retList[1])\x0d\
-\x0a            //Q\
-t.quit()\x0d\x0a      \
-  }\x0d\x0a        onR\
-ejected: {\x0d\x0a    \
-        console.\
-log(\x22Canceled\x22)\x0d\
-\x0a            //Q\
-t.quit()\x0d\x0a      \
-      exitedProp\
-erly = false\x0d\x0a  \
-      }\x0d\x0a       \
- //Component.onC\
-ompleted: visibl\
-e = true\x0d\x0a    }\x0d\
-\x0a\x0d\x0a    TCTG_Mana\
-ger{\x0d\x0a        id\
-: manager1\x0d\x0a    \
-    onYamlError:\
- console.log(\x22th\
-e yaml is not pr\
-operly formated\x22\
-)\x0d\x0a        onTem\
-plateError : con\
-sole.log(\x22the te\
-mplate is not we\
-ll formated\x22)\x0d\x0a \
-   }\x0d\x0a\x0d\x0a\x0d\x0a}\x0d\x0a\x0d\x0a/\
-*##^##\x0d\x0aDesigner\
- {\x0d\x0a    D{i:1;an\
-chors_height:100\
-;anchors_width:1\
-00;anchors_x:150\
-;anchors_y:190}\x0d\
-\x0a}\x0d\x0a##^##*/\x0d\x0a\
-\x00\x00\x04K\
-i\
-mport QtQuick 2.\
-12\x0d\x0aimport QtQui\
-ck.Controls 2.12\
-\x0d\x0a\x0d\x0aItem {\x0d\x0a    \
-visible: true\x0d\x0a \
-   property alia\
-s currentText: t\
-extArea.text\x0d\x0a  \
-  clip: true\x0d\x0a  \
-  Rectangle{\x0d\x0a  \
-      anchors.fi\
-ll: parent\x0d\x0a    \
-    //color: Qt.\
-lightGray\x0d\x0a     \
-   border.color:\
- \x22black\x22\x0d\x0a      \
-  border.width: \
-1\x0d\x0a    }\x0d\x0a    Fl\
-ickable {\x0d\x0a     \
-   id: scrollVie\
-w\x0d\x0a        flick\
-ableDirection: F\
-lickable.Vertica\
-lFlick\x0d\x0a        \
-anchors.fill: pa\
-rent\x0d\x0a        Te\
-xtArea.flickable\
-: TextArea{\x0d\x0a   \
-         id: tex\
-tArea\x0d\x0a         \
-   anchors.fill:\
- parent\x0d\x0a       \
-     selectByMou\
-se: true\x0d\x0a      \
-      selectByKe\
-yboard: true\x0d\x0a  \
-          font.p\
-ixelSize: 15\x0d\x0a  \
-          //plac\
-eholderText: \x22Va\
-lues in YAML\x22\x0d\x0a \
-           //pre\
-editText: \x22\x22\x0d\x0a  \
-          //over\
-writeMode: true\x0d\
-\x0a            tex\
-t: \x22name : aweso\
-me\x5cnchildes :\x5cn \
-- cool\x5cn - smart\
-\x5cn - fantastic\x22\x0d\
-\x0a        }\x0d\x0a    \
-    ScrollBar.ve\
-rtical: ScrollBa\
-r{}\x0d\x0a    }\x0d\x0a    \
-function updateH\
-ighlighting(rich\
-Text){\x0d\x0a        \
-textArea.text = \
-richText\x0d\x0a    }\x0d\
-\x0a    function ge\
-tPlainText(){\x0d\x0a \
-       return te\
-xtArea.getText(0\
-,textArea.length\
-)\x0d\x0a    }\x0d\x0a    fu\
-nction loadText(\
-t){\x0d\x0a        tex\
-tArea.text = t\x0d\x0a\
-    }\x0d\x0a}\x0d\x0a\
-\x00\x00\x03\x9a\
-i\
-mport QtQuick 2.\
-12\x0d\x0aimport QtQui\
-ck.Controls 2.12\
-\x0d\x0a\x0d\x0aItem {\x0d\x0a    \
-property string \
-result :  \x22\x22\x0d\x0a  \
-  visible: true\x0d\
-\x0a    clip: true\x0d\
-\x0a    Rectangle{\x0d\
-\x0a        anchors\
-.fill: parent\x0d\x0a \
-       color: \x22l\
-ightGray\x22\x0d\x0a     \
-   border.color:\
- \x22black\x22\x0d\x0a      \
-  border.width: \
-1\x0d\x0a\x0d\x0a    }\x0d\x0a\x0d\x0a  \
-  Flickable {\x0d\x0a \
-       id: scrol\
-lView\x0d\x0a        f\
-lickableDirectio\
-n: Flickable.Ver\
-ticalFlick\x0d\x0a    \
-    anchors.fill\
-: parent\x0d\x0a      \
-  TextArea.flick\
-able: TextArea{\x0d\
-\x0a            id:\
-resultTextArea\x0d\x0a\
-            anch\
-ors.fill: parent\
-\x0d\x0a            pl\
-aceholderText: \x22\
-Results\x22\x0d\x0a      \
-      text: resu\
-lt\x0d\x0a            \
-selectByMouse: t\
-rue\x0d\x0a           \
- selectByKeyboar\
-d: true\x0d\x0a       \
-     clip: false\
-\x0d\x0a            //\
-readOnly: true\x0d\x0a\
-            font\
-.pixelSize: 17\x0d\x0a\
-\x0d\x0a        }\x0d\x0a   \
-     ScrollBar.v\
-ertical: ScrollB\
-ar{}\x0d\x0a    }\x0d\x0a   \
- //onResultChang\
-ed: resultTextAr\
-ea.text = result\
-\x0d\x0a\x0d\x0a}\x0d\x0a\x0d\x0a/*##^##\
-\x0d\x0aDesigner {\x0d\x0a  \
-  D{i:0;autoSize\
-:true;height:480\
-;width:640}\x0d\x0a}\x0d\x0a\
-##^##*/\x0d\x0a\
+\x00\x00\x05\x84\
+\x00\
+\x00\x1a\xdax\x9c\xddY[o\xdb6\x14~7\xe0\xff\
+@(@\xe0t\x81d'\xeb\xb0*\xd8\x83\xebd\xcd\
+\xb0d\xb9y\x0d\x82a\x0b\x18\x89\xb6\xb9\xd2\xa2JR\
+q\x8c\xcc\xff}\x87\xbaY\x92)GN\xba\xac\x1b_\
+l\x93\xe7\xfa\xf1\xf0\x9cC\x9aNC.\x14\xbaP\x17\
+\x11\xf5>\xa1=\xbb\xb7\xd7n\xd1\xd2\xa4}M\x03\x9f\
+\xcf\xcck'x\xce#%Q\xcf\xde_Y\x1b\xf0@\
+\x09\xce\xa4\x99\xf3\x90b\xc6\xc7\x9a\xb3\x9b\xaf\x0d\x07\xc3\
+\x0f\xc9\x84\xe3\xa4S\x96\xebX\xedV\xbb\xd5\x0fCF\
+=\xac(\x0fR{\x1e\xdb-\x04\x83\xfa.\x9ab\x9a\
+\xce&s\x8a*F\x5c\xf4Y\x0eE\xc7:&\x8cq\
+t\xcd\x05\xf3\xad\x9dd}F}5qQo\xef\xfb\
+n21!t<Q.z\xf7]:qO%\xbd\
+\xd32\x94\x88H25%A\xf4\x1e\x0b\x17\x9d&_\
+\x1e\xb5Y(\x1dz.\xb3(\x1b%+\xb6\x7f\xa4\x8c\
+d\xfa\xb3\xd1\xf7\xb4?\xe8\x11)\xf2\xa0r\xca_\xc8\
+\xcc\xb6mk\x07-\xcc\xd4\xe5\xd9\x0c\x03\x1e\x92\xe0J\
+aE\x12\xb2U\xa2\x92\x8e3\xa0F1y\xacj\x95\
+ZN\x00}/\x02\x0e\xa0\x0a|,\xfc\x9f\xc9\xdc\xd6\
+l\xab\xb4<\x18\x0a:\x1e\x13A\xc0\x0e\x83y1M\
+f\x9e\xc6!\xd9{[\xcfu\x0c\xba+~o\x04\x83\
+\xc4\xf7\xa49\x0cW@\x9d\xc0\xd0\x1c\x03\xcd\xf3<\x0c\
+r\xdb\xbe\x18\x06\x06o\x86d\x1a\xb2\xd8\xa1\x0d\x98>\
+b\x16\x11\xd9\x90%\xe6\xd8\xeeKc\x90\xea\x83pE\
+B,\xb0\xe2\x02\x18\x1b\xd9\x00\x19A\x95E-69\
+ZG\xbefo\xa0h\x10m\xab\xa6\xb8\x0cx8o\
+J{\x8ees\xc0\xb5`tId\xc4\x94|\x81\xd3\
+C\x0e\xa9\xb5YB\xb9$\x81ODc\xfb\x18\xc1\x06\
+b\xc7\xd9\xc8\xf7:\xf2/\xe4=$\xf5\xb0\x99\xf3\xfd\
+;(PFM\x8b,\x81\x7f\x10\xd4O\x0aYQ\xa9\
+\xce&\xe3|e9\x8f\x03\x0f\xf2\x82\xb4G\x941\x17\
+A\xa4\x93@\x15KAv\x00uT\xea#P6R\
+KU%\x8a\xf2z\xa2-\x16~\x9dT\xa9e\x052\
+\xd0\x1c\xa7\x85\xab\x96(\x14dD\x04d\xa5\x8c\xb2\xd7\
+\xed\x1e\xac\xa7L\xf5\x96\x09\x17E\x17\x93tQ\xef\xe0\
+}a\xbd\x1a\x16\xe0\xb9G&\x9cAD\x0e\xe3}\xb2\
+\xb6\xe6x\xca\xe2M\xb3\xfe\x83X\xa4\xb1\xfc\x91\x92\x99\
+\x09\x0a\x91,7\xb6\xa7\xa99\xcfG\xa1\x09\x9c\x1eg\
+\xd14p\x91Y\x8d\xe03\xb0\xa1\x06\x0f\xf3a\xca\xe0\
+X\x1e\xa8\x9eQ\xb4\xe2\xe1)\x16cZ\xab\x9b\x91\x91\
+\xaa\xa1H\x8c\x96.\xda3rbF\xc7\x014q\x80\
+\xcd\x85\xb2\xfb\xfa\xd7\x09\x08C\x7f\xe5?\x87<\xfc\x9a\
+\xf7\xa9L\xf5>R\xaa\xbe\x0d\x12q\xcaOh\xd6\xf7\
+@YqX\xa5j\x12/z\x8c \x97\xb9h\x84\x99\
+4\xf6E\x03\xe8\xdb?\xad\xe9\x8a\x1c'=#v\xf2\
+\x89~@\x16U\xba\xf9\x8a\x98\x8f\xee\x08\xc2\xbeO|\
+d\x99\xb9Wx\xe12\x10`\xe8\xc3zv\x82A\xa7\
+\x9cmm/\x12:c\xeb\xdc\xb3[\xccS\xc5\x85F\
+\xfd\xd8&\xdb\xe1\xe9\x9a\xdad7\xd2\xe2\xfb\xfc\xcdX\
+\x7f\x80\x0b\x14\xd5C\x9c\x8d&\x1b6<;<\xd3\xdb\
+\x82\xd4\x84 \x19\x85\xf1Mm\x04\xb5`\xa2 \x93O\
+ \xb0\x99\x0en\x1a\x8c\xcd\x12\xee\xb1\xd0\xac\xb7\x1e\xf7\
+\x09lY\xdd6\x1c\x98\xb9=\x1eH\xce\x88\x0d\xeds\
+'\x93b@,\xd5T\x10\x1d\x85>\xc4\xc1q\xc1\xbc\
+N\x1e,\xb9\xd1\x03\x90\x96\x8b\xdd\xb5n\xfa\xa7'\xd6\
+\xce\xc6\x0d\xfa\xfap\xd0\x17\x81\xacMh\x12\x15\x95\xc6\
+\xfe\xb5\xa2c\xefE1\xaf\x9dL\x1a\x85\xc6.f\xd7\
+\x90\xd7rp\xffe\x87\x1aZ\xd9\xb4\xfa7:\xda\xa5\
+\xce\xf7\xb5\x5c\xfc\xf6\x09\x17/y\x14\xf8Ood|\
+mm\xbc\x8f\xb57\xea\x7f\xc6\xc7\xb7\xab\xcb8\xbe\x0b\
+\x18\x9e\x03\x0cp\x94\xa7~\x82zQ\x8bD\x08\xbd\xab\
+0$\xcd\x9a\xfa\xbf_\xad\xff/\xc0\xa0^k\x8c\xc1\
+Z\x88\xaeB\x1c\xac?\xce\xf9\x8f4\x8f\x0d\xf84\xe4\
+\x01\xe4a\x1b\xea\x01|gDU*\xc2\xf2\xcd\xcd\x96\
+D\x0d\xf5\xed\xacc\xe9\x07\xbc\xe2\xbe/\xdb=;\xbb\
+6M\xe3\xe6MB\xda\xefu+\xf7\xb0\xe5\xb3H\xf5\
+\x1efx9Y\x12\xa47C\xeb\x1cj\xa7$\x08\xd4\
+p\xf8\xc0\x08\x10&H\xf1\x989\xa9TqX.\x19\
+G\xf1-\xc4\xcd\xdfy\xa4=\xe1\xd3\xc2NH\xc2\x88\
+\xa7\x8e\x1e\xa8\xd4\xb5b\xa5\xc5\x99r\x1fzJ5O\
+\xfa\xc9\xe5\xfb\xe4\xa9\x9e_\x92\xf1\xa0\xefy$\xac\xe2\
+\xa7G\xb1\x92Y7<\xd2\xb6K\xed\x0a\xfa\xc6\xf8X\
+\xa4=\xfaU0Y9Yy\x11\xcby\x9e\xd3\xf4\xec\
+\xa6\xd2+\xc2\x1d\x07\xbc\xfb\x1cQU|\xa5Z\x14\xdd\
+\xbb$\x7f\x02LO\xb97\x80\x00\x00<\xfdjZ0\
+\xca\xd7\x83<P\x10z.xH\x04\x9bC\xbcT\xe0\
+/\xd8\xe085\xf1\x9a>\xe3\x02\xf3\xf2\x8c5\x087\
+\xc3c\xe5\xbf\x10n\xe5\xb4\xf0\xd5D\x9bn\xde\x04Q\
+'`&\xe0\x9a\xc7^\x8eY\xc7\x1cG\x95\x88d\x1c\
+\xfb:\xea:\xa9\xa8\xdf\xba\xbf\xaf\xe8)\xc4\xe9\x0ay\
+\xafJ\xfe\xff\x8dS\x9dToO\x13\x9c+\x81\x9a\xa1\
+_t\xf3\x06O\xd9\x91\x10\x5c\xb8e\xc7tH\xc6/\
+-T\xa2\x80+\x14f\x16C\xe3>\x85\x8d)y\xcc\
+\x83\xfc\x19K\x8bB\x06Y\xd9\x86f\xf2f\x84\xb1\x15\
+Yi\x81\x8d?\x9c7[[\x7flm\xb5[\x87D\
+\xc2m\x9b\xe4OG\x87\x8f\xd4\xed\x1d\xa4\x05\xe26\xfd\
+/F?\xb9dS\xc9\xff5\xc5\x99\x07\xb7\xf7v\xf9\
+k\xee\xf6\xdeu\x17\xb1\x9aX\xc5\x1b\xa7\xdd\xfa\x1bR\
+\xe4\xfc(\
 "
 
 qt_resource_name = b"\
+\x00\x0f\
+\x0aPF\x9c\
+\x00R\
+\x00e\x00s\x00u\x00l\x00t\x00s\x00V\x00i\x00e\x00w\x00.\x00q\x00m\x00l\
+\x00\x10\
+\x0c\xfd\x02\xdc\
+\x00V\
+\x00a\x00l\x00u\x00e\x00s\x00E\x00d\x00i\x00t\x00o\x00r\x00.\x00q\x00m\x00l\
 \x00\x12\
 \x0c\x87>\xbc\
 \x00T\
@@ -648,28 +329,25 @@ qt_resource_name = b"\
 \x08\x01Z\x5c\
 \x00m\
 \x00a\x00i\x00n\x00.\x00q\x00m\x00l\
-\x00\x10\
-\x0c\xfd\x02\xdc\
-\x00V\
-\x00a\x00l\x00u\x00e\x00s\x00E\x00d\x00i\x00t\x00o\x00r\x00.\x00q\x00m\x00l\
-\x00\x0f\
-\x0aPF\x9c\
-\x00R\
-\x00e\x00s\x00u\x00l\x00t\x00s\x00V\x00i\x00e\x00w\x00.\x00q\x00m\x00l\
 "
 
 qt_resource_struct = b"\
 \x00\x00\x00\x00\x00\x02\x00\x00\x00\x04\x00\x00\x00\x01\
-\x00\x00\x00*\x00\x00\x00\x00\x00\x01\x00\x00\x03\xe0\
-\x00\x00\x00f\x00\x00\x00\x00\x00\x01\x00\x00#\x01\
+\x00\x00\x00\x00\x00\x00\x00\x00\
+\x00\x00\x00t\x00\x01\x00\x00\x00\x01\x00\x00\x0c\xd5\
+\x00\x00\x01sC\x8c!\xc1\
 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
-\x00\x00\x00@\x00\x00\x00\x00\x00\x01\x00\x00\x1e\xb2\
+\x00\x00\x01s0N\xcf5\
+\x00\x00\x00J\x00\x00\x00\x00\x00\x01\x00\x00\x08\xf5\
+\x00\x00\x01s=\xbb\xb0\xde\
+\x00\x00\x00$\x00\x00\x00\x00\x00\x01\x00\x00\x03\x9e\
+\x00\x00\x01sC\xec/)\
 "
 
 def qInitResources():
-    QtCore.qRegisterResourceData(0x01, qt_resource_struct, qt_resource_name, qt_resource_data)
+    QtCore.qRegisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
 
 def qCleanupResources():
-    QtCore.qUnregisterResourceData(0x01, qt_resource_struct, qt_resource_name, qt_resource_data)
+    QtCore.qUnregisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)
 
 qInitResources()

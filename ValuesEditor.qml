@@ -17,16 +17,20 @@ Item {
         anchors.fill: parent
         TextArea.flickable: TextArea{
             id: textArea
-            anchors.fill: parent
             selectByMouse: true
             selectByKeyboard: true
             font.pixelSize: 15
+            textFormat:  Text.RichText
             //placeholderText: "Values in YAML"
             //preeditText: ""
             //overwriteMode: true
-            text: "name : awesome\nchildes :\n - cool\n - smart\n - fantastic"
+            text: "name : awesome<br/>childes :<br/> - cool<br/> - smart<br/> - fantastic"
         }
         ScrollBar.vertical: ScrollBar{}
+        onWidthChanged: {
+            textArea.width = textArea.width>scrollView.width?textArea.width:scrollView.width
+        }
+        onHeightChanged: {textArea.height = textArea.height>scrollView.height?textArea.height:scrollView.height}
     }
     function updateHighlighting(richText){
         textArea.text = richText

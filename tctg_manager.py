@@ -1,5 +1,6 @@
 
 from PySide2.QtCore import QObject,Signal,Slot,QUrl
+from PySide2.QtGui import QTextDocument
 
 import json
 import yaml
@@ -50,16 +51,21 @@ class TCTG_Manager(QObject):
     
     @Slot(str,str, result=str)
     def highlightCode(self, code,language):
+        #converting the html to platin
+        td = QTextDocument()
+        td.setHtml(code)
+        print("the plain text is here : "+ td.toPlainText())
         codeLexer = get_lexer_by_name(
             language)
         f = open("highlightTest.html",'wb')
         #fi = open("highlightTest.png",'wb')
         #style = get_style_by_name("native")
-        formatter = HtmlFormatter(full=True, encoding="UTF-8")
+        formatter = HtmlFormatter(full=True,noclasses=True, encoding="UTF-8")
         #imgFormater = ImageFormatter()
-        result = highlight(code,codeLexer,formatter,f)
-        print(result)
-        return result
+        result = highlight(td.toPlainText(),codeLexer,formatter)
+        td.setHtml(result.decode("UTF-8"))
+        print(td.toHtml())
+        return td.toHtml()
     
     @Slot(str,str,QUrl)
     def saveState(self, templateText:str,valuesText:str,fileURL:QUrl):

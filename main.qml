@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.12
 import QtQuick.Dialogs 1.0
 import TCTG 1.0
-import ":/"
+//import ":/"
 
 ApplicationWindow {
     id: mainWindow
@@ -120,7 +120,7 @@ ApplicationWindow {
                 Layout.row: 1
                 onClicked: {
                     //TODO add the support for html highlighting
-                    var the_code = valuesEditor.getPlainText();
+                    var the_code = valuesEditor.currentText;
                     console.log(the_code)
                      valuesEditor.updateHighlighting(manager1.highlightCode(the_code,"YAML"))
                 }

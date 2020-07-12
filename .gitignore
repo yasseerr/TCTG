@@ -76,3 +76,4 @@ build
 dist
 TCTG.spec
 .vscode/*
+resources.py
